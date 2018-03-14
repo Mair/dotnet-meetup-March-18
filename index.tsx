@@ -1,10 +1,14 @@
-class ChildClassComp extends React.Component {
+interface propsDefinition {
+  message: string
+} 
+
+class ChildClassComp extends React.Component<propsDefinition> {
   render(){
     return <div>{this.props.message}</div>
   }
 }
 
-const ChildFuncComp = props => (<div>{props.message}</div>)
+const ChildFuncComp = (props : propsDefinition) => (<div>{props.message}</div>)
 
 class ClassComp extends React.Component {
   render(){
