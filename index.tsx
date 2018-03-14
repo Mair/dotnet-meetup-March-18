@@ -1,1 +1,3 @@
-ReactDOM.render(<div>hello world!</div>, document.getElementById("container"))
+const FuncComp = () => (<div>hello world</div>)
+
+ReactDOM.render(<FuncComp />, document.getElementById("container"))
