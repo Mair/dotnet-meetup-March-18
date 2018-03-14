@@ -1,23 +1,26 @@
 interface propsDefinition {
-  message: string
-} 
+  callBack: (message: string) => void;
+}
 
 class ChildClassComp extends React.Component<propsDefinition> {
-  render(){
-    return <div>{this.props.message}</div>
+  render() {
+    return (
+      <div>
+        <input type="text" onChange={e => this.props.callBack(e.target.value)} />
+      </div>
+    )
   }
 }
-
-const ChildFuncComp = (props : propsDefinition) => (<div>{props.message}</div>)
 
 class ClassComp extends React.Component {
-  render(){
-    return <div>
-      hello world from parent class
-      <ChildFuncComp message="message sent to functional component" />
-      <ChildClassComp message="message sent to class component" />
-    </div>
+  render() {
+    return (
+      <div>
+        hello world from parent class
+        <ChildClassComp callBack={message => console.log(message)} />
+      </div>
+    );
   }
 }
 
-ReactDOM.render(<ClassComp />, document.getElementById("container"))
+ReactDOM.render(<ClassComp />, document.getElementById('container'));
