@@ -1,1 +1,1 @@
-alert("js is working")
+ReactDOM.render(<div>hello world!</div>, document.getElementById("container"))
