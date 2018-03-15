@@ -1,0 +1,25 @@
+{
+  "name": "react-walk-through",
+  "version": "1.0.0",
+  "description": "## prerequisite * node installed * typescript installed * run `tsc --watch`",
+  "main": "index.js",
+  "dependencies": {
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "^16.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mair/dotnet-meetup-March-18.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mair/dotnet-meetup-March-18/issues"
+  },
+  "homepage": "https://github.com/Mair/dotnet-meetup-March-18#readme"
+}
