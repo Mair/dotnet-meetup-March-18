@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "## prerequisite * node installed * typescript installed * run `tsc --watch`",
   "main": "index.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
