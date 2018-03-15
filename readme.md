@@ -8,16 +8,17 @@
 * install dependencies `npm install`
 * run `tsc --watch`
 
-1. install react typings
 
+1. ensure everything is working
 ```
-npm init -y
-npm i @types/react @types/react-dom --dave-dev
-```
+git checkout step1
+``` 
+copy the path of index.html and paste it into your browser. You should get an alert
+
 
 2. render dom
 ``` 
-git checkout master~7 
+git checkout step2
 ```
 ```javascript
 ReactDOM.render(<div>hello world!</div>, document.getElementById("container"))
@@ -25,7 +26,7 @@ ReactDOM.render(<div>hello world!</div>, document.getElementById("container"))
 
 3. simple functional component
 ``` 
-git checkout master~6 
+git checkout step3
 ```
 
 ```javascript
@@ -37,7 +38,7 @@ ReactDOM.render(<FuncComp />, document.getElementById("container"))
 
 3. convert to class component
 ``` 
-git checkout master~5 
+git checkout step4
 ```
 ```javascript
 class ClassComp extends React.Component {
@@ -51,7 +52,7 @@ ReactDOM.render(<ClassComp />, document.getElementById("container"))
 
 4. nested components & passing props
 ``` 
-git checkout master~4 
+git checkout step5
 ```
 ```typescript
 
@@ -79,7 +80,7 @@ ReactDOM.render(<ClassComp />, document.getElementById("container"))
 
 5. add typescript typings
 ``` 
-git checkout master~3 
+git checkout step6
 ```
 ```typescript
 
@@ -110,7 +111,7 @@ ReactDOM.render(<ClassComp />, document.getElementById("container"))
 
 6. show using passing messages to parent with callback
 ``` 
-git checkout master~2
+git checkout step7
 ```
 ```typescript
 interface propsDefinition {
@@ -143,7 +144,7 @@ ReactDOM.render(<ClassComp />, document.getElementById('container'));
 
 7 using state to update components
 ``` 
-git checkout master~1
+git checkout step8
 ```
 ```typescript
 interface propsDefinition {
