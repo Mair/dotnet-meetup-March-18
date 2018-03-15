@@ -2,24 +2,33 @@
 
 ## prerequisite
 * node installed
-* typescript installed
+* git installed
+* typescript installed `npm i typescript -g `
+* clone the repo
+* install dependencies `npm install`
 * run `tsc --watch`
 
 
-
-1. install react typings
-
+1. ensure everything is working
 ```
-npm init -y
-npm i @types/react @types/react-dom --dave-dev
-```
+git checkout step1
+``` 
+copy the path of index.html and paste it into your browser. You should get an alert
+
 
 2. render dom
+``` 
+git checkout step2
+```
 ```javascript
 ReactDOM.render(<div>hello world!</div>, document.getElementById("container"))
 ```
 
 3. simple functional component
+``` 
+git checkout step3
+```
+
 ```javascript
 const FuncComp = () => (<div>hello world</div>)
 
@@ -28,6 +37,9 @@ ReactDOM.render(<FuncComp />, document.getElementById("container"))
 
 
 3. convert to class component
+``` 
+git checkout step4
+```
 ```javascript
 class ClassComp extends React.Component {
   render(){
@@ -39,6 +51,9 @@ ReactDOM.render(<ClassComp />, document.getElementById("container"))
 ```
 
 4. nested components & passing props
+``` 
+git checkout step5
+```
 ```typescript
 
 class ChildClassComp extends React.Component {
@@ -64,6 +79,9 @@ ReactDOM.render(<ClassComp />, document.getElementById("container"))
 
 
 5. add typescript typings
+``` 
+git checkout step6
+```
 ```typescript
 
 interface propsDefinition {
@@ -92,7 +110,9 @@ ReactDOM.render(<ClassComp />, document.getElementById("container"))
 ```
 
 6. show using passing messages to parent with callback
-
+``` 
+git checkout step7
+```
 ```typescript
 interface propsDefinition {
   callBack: (message: string) => void;
@@ -123,6 +143,9 @@ ReactDOM.render(<ClassComp />, document.getElementById('container'));
 ```
 
 7 using state to update components
+``` 
+git checkout step8
+```
 ```typescript
 interface propsDefinition {
   callBack: (message: string) => void;
@@ -160,66 +183,6 @@ ReactDOM.render(<ClassComp />, document.getElementById('container'));
 ```
 
 8. arrays and more
-```typescript
-interface Planet {
-  name: string;
-  image: string;
-}
-const planets: Planet[] = [
-  {
-    name: 'Mercury',
-    image:
-      'data:image/jpeg;base64,/9j/4AAQ....'
-  },
-  {
-    name: 'Venus',
-    image:
-    'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/....'
-  },
-  {
-    name: 'Earth',
-    image:
-      'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABA....'
-  },
-  ....
-];
-
-interface planetProps {
-  callBack: (planet: Planet) => void;
-  planet: Planet;
-}
-
-class PlanetComp extends React.Component<planetProps> {
-  render() {
-    return (
-      <div  onClick={() => this.props.callBack(this.props.planet)}>
-        <img style={{ width: '100px', height: '100px', margin: '10px' }} src={this.props.planet.image} />
-        <h2>{this.props.planet.name}</h2>
-      </div>
-    );
-  }
-}
-interface ClassCompProps {}
-interface ClassCompState {
-  planet: Planet;
-}
-
-class ClassComp extends React.Component<ClassCompProps, ClassCompState> {
-  state = { planet: null };
-
-  setPlanet = selectedPlanet => this.setState({ planet: selectedPlanet });
-
-  render() {
-    return (
-      <div>
-        <div style={{ display: 'flex', width:'100%' }}>
-          {planets.map(planet => <PlanetComp key={planet.name} planet={planet} callBack={this.setPlanet} />)}
-        </div>
-        {this.state.planet && <img style={{width: '200px', height: '200px', }} src={this.state.planet.image} alt="" />}
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<ClassComp />, document.getElementById('container'));
+``` 
+git checkout master
 ```
