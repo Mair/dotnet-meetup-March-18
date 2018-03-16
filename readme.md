@@ -8,6 +8,7 @@
 * install dependencies `npm install`
 * run `tsc --watch`
 
+[![React meetup video](http://img.youtube.com/vi/5zP7L2UY0K4/0.jpg)](http://www.youtube.com/watch?v=5zP7L2UY0K4)
 
 1. ensure everything is working
 ```
